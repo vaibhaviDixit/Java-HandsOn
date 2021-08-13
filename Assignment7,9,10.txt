@@ -1,0 +1,16 @@
+7) when we execute code first using postfix operator then we get output like :
+i=11 and n=0
+when we use prefix operator we get :
+i=11 n=1
+Because when we use postfix increment operator it will first increment i value i.e i will 11 and then 11% 5 so 1 will be stored in n.
+in case of prefix operator it will perform 10%5 first and store 0 in n i.e n=0
+
+9)
+In this program value 6 is printed twice the reason is we are using postfix increment operator which prints or stores value first and then increment it . That's why 6 is printed twice.
+
+10)
+aValue=8933.234;  Here the value 8933.234 is stored in variable named aValue.
+aValue++;         Here postfix increment operator is used which increments aValue by 1.
+System.out.println("Hello World");  This is simple print statement which prints Hello World on console.
+Bicycle myBike=new Bicycle();   Here object of class Bicycle named myBike is created or  we can instatiated.
+

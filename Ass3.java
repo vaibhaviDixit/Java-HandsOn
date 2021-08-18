@@ -11,8 +11,8 @@ public class Ass3 {
         float E3_Salary; // we have to find third employee salary
 
         // we know 1000(avg)=(1100(E1)+500(E2)+E3) / 3 .....3 because there are 3 employees
-        //E3 =  1000*3 / (1100+500)
-        E3_Salary= (float) ((avgOfThreeEmpInOneWeek*3.0)/ (E1_Salary+E2_Salary));
+        //E3 =  1000*3 - (1100+500)
+        E3_Salary= (float) ((avgOfThreeEmpInOneWeek*3.0)-(E1_Salary+E2_Salary));
         System.out.println("Salary of thid employee is: "+E3_Salary);
     }
 }

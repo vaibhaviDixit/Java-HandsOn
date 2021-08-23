@@ -10,7 +10,7 @@ class Student{
     String div;
     String admiDate,Address,email;
     long phone;
-
+    boolean isAdmit;
     //default constructor
     Student(){
         System.out.println("Default constructor");
@@ -47,9 +47,11 @@ class Student{
     }
 
     void admit(){
+        isAdmit=true;
         System.out.println("You are admitted to "+college);
     }
     void terminate(){
+        isAdmit=false;
         System.out.println("You are terminated from "+college);
     }
     void changeDiv(String dv){
@@ -70,7 +72,14 @@ class Student{
     }
 
     void printDetails(){
-        System.out.println(name+"\t"+Class+"\t"+div+"\t"+admiDate+"\t"+Address+"\t"+email+"\t"+phone);
+        String admit;
+        if(isAdmit){
+            admit="Admitted";
+        }
+        else{
+            admit="not Admitted";
+        }
+        System.out.println(name+"\t"+Class+"\t"+div+"\t"+admiDate+"\t"+Address+"\t"+email+"\t"+phone+"\t"+admit);
     }
 
 
@@ -96,6 +105,9 @@ public class JPR23 {
 
         //admit student
         s2.admit();
+
+        Student s3=new Student("Sayali","TYMECH","d","3/8/2020");
+        s3.printDetails();
 
 
     }

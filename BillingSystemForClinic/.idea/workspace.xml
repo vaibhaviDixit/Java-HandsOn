@@ -34,7 +34,7 @@
       <recent name="C:\Users\Vaibhavi\IdeaProjects\BillingSystemForClinic\src\billingSystem\login\img" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DashBoard">
+  <component name="RunManager" selected="Application.Login">
     <configuration name="AddAppointment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="billingSystem.subFrames.AddAppointment" />
       <module name="BillingSystemForClinic" />
@@ -102,8 +102,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DashBoard" />
         <item itemvalue="Application.Login" />
+        <item itemvalue="Application.DashBoard" />
         <item itemvalue="Application.AddAppointment" />
         <item itemvalue="Application.AddPatients" />
         <item itemvalue="Application.AddBills" />
@@ -144,22 +144,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="210" y="0" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1632577011592" />
-    <state width="1289" height="456" key="GridCell.Tab.0.bottom" timestamp="1632667920536">
+    <state width="1289" height="456" key="GridCell.Tab.0.bottom" timestamp="1632712004814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1289" height="456" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632667920536" />
-    <state width="1289" height="456" key="GridCell.Tab.0.center" timestamp="1632667920536">
+    <state width="1289" height="456" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1632712004814" />
+    <state width="1289" height="456" key="GridCell.Tab.0.center" timestamp="1632712004813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1289" height="456" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632667920536" />
-    <state width="1289" height="456" key="GridCell.Tab.0.left" timestamp="1632667920536">
+    <state width="1289" height="456" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1632712004813" />
+    <state width="1289" height="456" key="GridCell.Tab.0.left" timestamp="1632712004813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1289" height="456" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632667920536" />
-    <state width="1289" height="456" key="GridCell.Tab.0.right" timestamp="1632667920536">
+    <state width="1289" height="456" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1632712004813" />
+    <state width="1289" height="456" key="GridCell.Tab.0.right" timestamp="1632712004814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1289" height="456" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632667920536" />
+    <state width="1289" height="456" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1632712004814" />
     <state width="1289" height="174" key="GridCell.Tab.1.bottom" timestamp="1632072976293">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -180,10 +180,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1632577018032" />
-    <state x="189" y="67" key="com.intellij.ide.util.TipDialog" timestamp="1632662828291">
+    <state x="189" y="67" key="com.intellij.ide.util.TipDialog" timestamp="1632707296878">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="189" y="67" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1632662828291" />
+    <state x="189" y="67" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1632707296878" />
     <state x="92" y="-2" width="1177" height="1976" key="search.everywhere.popup" timestamp="1632564389840">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

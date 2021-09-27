@@ -11,8 +11,8 @@ import static java.awt.Color.*;
 public class DashBoard extends JFrame implements ActionListener {
 
     JMenuBar mb=null;
-    JMenu dash,patients,doctors,appoint,bill;
-    JMenuItem addP,listP,addD,listD,addAp,listAp,gBill,listBill,logout,addSer;
+    JMenu patients,doctors,appoint,bill;
+    JMenuItem addP,dash,listP,addD,listD,addAp,listAp,gBill,listBill,logout,addSer;
     DashBoard(){
         setTitle("HappyLife Clinic");
         getContentPane().setBackground(WHITE);
@@ -20,15 +20,20 @@ public class DashBoard extends JFrame implements ActionListener {
 
         mb=new JMenuBar();
         mb.setBackground(black);
-        mb.setFont(new Font("Tahoma",Font.BOLD,30));
 
 
+        dash=new JMenuItem("Dashboard");
+        dash.setForeground(WHITE);
+        dash.setBackground(BLACK);
+        dash.setFont(new Font("Tahoma",Font.BOLD,14));
+        dash.addActionListener(this);
+        mb.add(dash);
 
        patients=new JMenu("Patients");
        Image i=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/pt.png")).getImage().getScaledInstance(40,40,Image.SCALE_DEFAULT);
        patients.setIcon(new ImageIcon(i));
        patients.setForeground(WHITE);
-       patients.setFont(new Font("Tahoma",Font.BOLD,18));
+       patients.setFont(new Font("Tahoma",Font.BOLD,14));
        mb.add(patients);
        addP=new JMenuItem("Add Patients");
        addP.addActionListener(this);
@@ -46,7 +51,7 @@ public class DashBoard extends JFrame implements ActionListener {
         Image dt=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/doc.png")).getImage().getScaledInstance(40,40,Image.SCALE_DEFAULT);
         doctors.setIcon(new ImageIcon(dt));
         doctors.setForeground(WHITE);
-        doctors.setFont(new Font("Tahoma",Font.BOLD,18));
+        doctors.setFont(new Font("Tahoma",Font.BOLD,14));
         mb.add(doctors);
         addD=new JMenuItem("Add Doctors");
         addD.addActionListener(this);
@@ -61,7 +66,7 @@ public class DashBoard extends JFrame implements ActionListener {
         Image app=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/app.png")).getImage().getScaledInstance(40,40,Image.SCALE_DEFAULT);
         appoint.setIcon(new ImageIcon(app));
         appoint.setForeground(WHITE);
-        appoint.setFont(new Font("Tahoma",Font.BOLD,18));
+        appoint.setFont(new Font("Tahoma",Font.BOLD,14));
         mb.add(appoint);
 
         addAp=new JMenuItem("Add Appointment");
@@ -77,7 +82,7 @@ public class DashBoard extends JFrame implements ActionListener {
         Image b=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/bi.png")).getImage().getScaledInstance(40,40,Image.SCALE_DEFAULT);
         bill.setIcon(new ImageIcon(b));
         bill.setForeground(WHITE);
-        bill.setFont(new Font("Tahoma",Font.BOLD,18));
+        bill.setFont(new Font("Tahoma",Font.BOLD,14));
         mb.add(bill);
 
         gBill=new JMenuItem("Generate Bill");
@@ -94,7 +99,7 @@ public class DashBoard extends JFrame implements ActionListener {
         addSer.setIcon(new ImageIcon(ser));
         addSer.setForeground(WHITE);
         addSer.setBackground(BLACK);
-        addSer.setFont(new Font("Tahoma",Font.BOLD,18));
+        addSer.setFont(new Font("Tahoma",Font.BOLD,14));
         addSer.addActionListener(this);
         mb.add(addSer);
 
@@ -103,7 +108,7 @@ public class DashBoard extends JFrame implements ActionListener {
         logout.setIcon(new ImageIcon(log));
         logout.setForeground(WHITE);
         logout.setBackground(BLACK);
-        logout.setFont(new Font("Tahoma",Font.BOLD,18));
+        logout.setFont(new Font("Tahoma",Font.BOLD,14));
         logout.addActionListener(this);
         mb.add(logout);
 
@@ -119,112 +124,6 @@ public class DashBoard extends JFrame implements ActionListener {
         add(l1);
 
 
-        JPanel totalPatients=new JPanel();
-        totalPatients.setBackground(darkGray);
-        totalPatients.setBounds(80,100,200,150);
-
-        JLabel label1=new JLabel("Total Registered");
-        label1.setFont(new Font("Tahoma",Font.BOLD,16));
-        label1.setForeground(white);
-
-        JLabel label2=new JLabel("Patients");
-        label2.setFont(new Font("Tahoma",Font.BOLD,16));
-        label2.setForeground(white);
-
-        JLabel label3=new JLabel(String.valueOf(new DbConnection().getTotalPatients() ) );
-        label3.setFont(new Font("Tahoma",Font.BOLD,18));
-        label3.setForeground(white);
-
-        label1.setBounds(30,50,200,50);
-        label2.setBounds(70,70,100,50);
-        label3.setBounds(90,100,100,50);
-
-        ImageIcon patients=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/pt.png"));
-        Image pt=patients.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT);
-        ImageIcon ptt=new ImageIcon(pt);
-        JLabel ptimg=new JLabel(ptt);
-        ptimg.setBounds(80,10,50,50);
-
-        totalPatients.add(label1);
-        totalPatients.add(label2);
-        totalPatients.add(label3);
-
-        totalPatients.add(ptimg);
-        l1.add(totalPatients);
-
-        totalPatients.setLayout(null);
-
-
-        JPanel totalApp=new JPanel();
-        totalApp.setBackground(darkGray);
-        totalApp.setBounds(300,100,200,150);
-
-        JLabel label4=new JLabel("Total");
-        label4.setFont(new Font("Tahoma",Font.BOLD,16));
-        label4.setForeground(white);
-
-        JLabel label5=new JLabel("Appointments");
-        label5.setFont(new Font("Tahoma",Font.BOLD,16));
-        label5.setForeground(white);
-
-        JLabel label6=new JLabel(String.valueOf(new DbConnection().getTotalAppointments() ) );
-        label6.setFont(new Font("Tahoma",Font.BOLD,18));
-        label6.setForeground(white);
-
-        label4.setBounds(85,50,200,50);
-        label5.setBounds(50,70,200,50);
-        label6.setBounds(90,100,100,50);
-
-        ImageIcon apps=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/app.png"));
-        Image at=apps.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT);
-        ImageIcon apt=new ImageIcon(at);
-        JLabel aptimg=new JLabel(apt);
-        aptimg.setBounds(80,10,50,50);
-
-        totalApp.add(label4);
-        totalApp.add(label5);
-        totalApp.add(label6);
-
-        totalApp.add(aptimg);
-        l1.add(totalApp);
-
-        totalApp.setLayout(null);
-
-
-        JPanel totalBills=new JPanel();
-        totalBills.setBackground(darkGray);
-        totalBills.setBounds(520,100,200,150);
-
-        JLabel label7=new JLabel("Total");
-        label7.setFont(new Font("Tahoma",Font.BOLD,16));
-        label7.setForeground(white);
-
-        JLabel label8=new JLabel("Bills Generated");
-        label8.setFont(new Font("Tahoma",Font.BOLD,16));
-        label8.setForeground(white);
-
-        JLabel label9=new JLabel(String.valueOf(new DbConnection().getTotalBills() ) );
-        label9.setFont(new Font("Tahoma",Font.BOLD,18));
-        label9.setForeground(white);
-
-        label7.setBounds(85,50,200,50);
-        label8.setBounds(50,70,200,50);
-        label9.setBounds(90,100,100,50);
-
-        ImageIcon bills=new ImageIcon(ClassLoader.getSystemResource("billingSystem/img/bi.png"));
-        Image bl=bills.getImage().getScaledInstance(50,50,Image.SCALE_DEFAULT);
-        JLabel billimg=new JLabel(new ImageIcon(bl));
-        billimg.setBounds(80,10,50,50);
-
-        totalBills.add(label7);
-        totalBills.add(label8);
-        totalBills.add(label9);
-
-        totalBills.add(billimg);
-        l1.add(totalBills);
-
-        totalBills.setLayout(null);
-
 
 
 
@@ -239,7 +138,10 @@ public class DashBoard extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("Add Patients")){
+        if(e.getActionCommand().equals("Dashboard")){
+            new DashStatus().setVisible(true);
+        }
+        else if(e.getActionCommand().equals("Add Patients")){
             new AddPatients().setVisible(true);
         }
         else if(e.getActionCommand().equals("List Patients")){

@@ -10,7 +10,7 @@ public class Login extends JFrame implements ActionListener {
     JTextField username;
     JPasswordField password;
     JButton login;
-
+    
     Login(){
         setTitle("HappyLife Clinic");
         setResizable(false);
